@@ -21,8 +21,21 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="nav-item active">
+                            <div class="dropdown show">
+                                <a class="nav-link active dropdown-toggle" href="#"
+                                   id="dropdownMenuLink"
+                                   data-toggle="dropdown"
+                                   aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Dogs
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Dogs" asp-action="All">All Dogs</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Dogs" asp-action="Create">Create Dog</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -38,7 +51,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - DogsApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - DogsApp
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
