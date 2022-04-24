@@ -37,7 +37,7 @@ namespace DogsApp.Controllers
                     Picture = dogFromDb.Picture
                 }).ToList();
 
-            return this.View();
+            return this.View(dogs);
         }
 
         [HttpPost]
